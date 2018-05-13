@@ -1,0 +1,44 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.title {
+  color: white;
+}
+.title p{
+  display: inline-block;
+  float: left;
+  padding-right: 25px;
+}
+.title span{
+  font-size: 25px;
+}
+.title .nav{
+  margin-top: 5px;
+  float: left;
+  width: 25px;
+  height: 25px;
+  background-color: #626870;
+  border-radius: 3px;
+}
+.title .nav i{
+  padding-top: 3px;
+  padding-left: 5px;
+}
+
+.information{
+  float: right;
+  padding-right: 10px;
+}
+.information .user-image{
+  font-size: 28px;
+}
+.information  p{
+  color: white;
+}
+.information  ul li{
+  list-style: none;
+  float: left;
+  padding-top: 12px;
+  padding-left: 10px;
+}
