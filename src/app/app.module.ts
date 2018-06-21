@@ -1,8 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import {AppRouterModule} from './app.router.module';
+import {ReqService} from './shared/req.service';
+import {HttpClientModule} from '@angular/common/http';
+import {ReactiveFormsModule} from '@angular/forms';
+import {GlobalService} from './shared/global.service';
 
 @NgModule({
   declarations: [
@@ -10,9 +13,11 @@ import {AppRouterModule} from './app.router.module';
   ],
   imports: [
     BrowserModule,
-    AppRouterModule
+    AppRouterModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ReqService, GlobalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

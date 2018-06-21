@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RemindComponent } from './remind.component';
+import { PageoperationComponent } from './pageoperation.component';
 
-describe('RemindComponent', () => {
-  let component: RemindComponent;
-  let fixture: ComponentFixture<RemindComponent>;
+describe('PageoperationComponent', () => {
+  let component: PageoperationComponent;
+  let fixture: ComponentFixture<PageoperationComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RemindComponent ]
+      declarations: [ PageoperationComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RemindComponent);
+    fixture = TestBed.createComponent(PageoperationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -9,25 +9,47 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-2">
+      <div class="col-md-2" (mouseleave)="onMouseleave()">
+        <!--运动条-->
+        <div #slidingBox class="sliding_box" [ngStyle]="{height: slidinghight+'px',top:slidingTop+'px'}"></div>
         <div class="nav">
-          <ul>
-            <li><a routerLink="/home"><i class="glyphicon glyphicon-home"></i>首页</a></li>
+          <ul class="Mul">
+            <li><a routerLink="/home"><i class="glyphicon glyphicon-home"></i><span>首页</span></a></li>
           </ul>
-          <ul>
-            <li><a class="Fnav"><span class="Span">操作菜单</span></a></li>
-            <li><a routerLink="./operation/fault"><i class="glyphicon glyphicon-lock"></i>故障详情</a></li>
-            <li><a><i class="glyphicon glyphicon-tasks"></i>时间进度</a></li>
-            <li><a><i class="glyphicon glyphicon-warning-sign"></i>巡检</a></li>
+          <ul #mainul class="Mul">
+            <li style="padding:10px;"><a class="Fnav" style="height: 30px;line-height: 30px;">
+              <span class="Span">操作菜单</span></a></li>
+            <li  #mainli *ngFor="let list of navlist">
+              <a
+                 #mainli_a
+                (mouseenter)="mainLiMouseEnter(mainli_a)"
+                (click)="mainLiClick(mainul,menuul,list)" >
+              <i class="{{list.icon}}" ></i>
+                <span>{{list.title}}</span>
+              </a>
+               <ul  #menuul class="menu-ul">
+                <li *ngFor="let listchild of list.children" #menuli [ngStyle]="{background:listchild.setState? 'rgba(255,255,255,0.2)': ''}">
+                  <a
+                    routerLink="{{listchild.routers}}"
+                    #menuli_a [ngStyle]="{color:listchild.setState? '#f1f1f1': ''}"
+                    (mouseenter)="menuliMouseEnter(menuli)"
+                    (click)="menuliClick(listchild)">
+                    <i class="{{listchild.icon}}"></i>
+                    <span>{{listchild.title}}</span>
+                  </a>
+              </ul>
+            </li>
           </ul>
-          <ul style="height: 235px;">
-            <li><a href="#" class="Fnav"><span class="Span" style="padding-left: 10px;">大数据分析</span></a></li>
+          <ul style="height: 125px;" class="Mul">
+            <li style="padding:10px;"><a href="#" class="Fnav" style="height: 30px;line-height: 30px;">
+              <span class="Span" style="padding-left: 10px;">大数据分析</span></a></li>
           </ul>
-          <ul>
-            <li><a href="#" class="Fnav"><span class="Span">信息菜单</span></a></li>
-            <li><a href="#"><i class="glyphicon glyphicon-time"></i>历史记录</a></li>
-            <li><a href="#"><i class="glyphicon glyphicon-th"></i>巡检点汇总</a></li>
-            <li><a href="#"><i class="glyphicon glyphicon-user"></i>个人信息</a></li>
+          <ul class="Mul">
+            <li style="padding: 10px;"><a href="#" class="Fnav" style="height: 30px;line-height: 30px;">
+              <span class="Span">信息菜单</span></a></li>
+            <li><a href="#"><i class="glyphicon glyphicon-time"></i><span>历史记录</span></a></li>
+            <li><a href="#"><i class="glyphicon glyphicon-th"></i><span>巡检点汇总</span></a></li>
+            <li><a href="#"><i class="glyphicon glyphicon-user"></i><span>个人信息</span></a></li>
           </ul>
         </div>
       </div>

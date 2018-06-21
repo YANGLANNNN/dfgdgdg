@@ -30,6 +30,9 @@
   float: right;
   padding-right: 10px;
 }
+.information a{
+  text-decoration: none;
+}
 .information .user-image{
   font-size: 28px;
 }
@@ -41,4 +44,10 @@
   float: left;
   padding-top: 12px;
   padding-left: 10px;
+}
+.line{
+  width: 1px;
+  height: 19px;
+  background-color: #fff;
+  margin: 12px 0 0 10px;
 }

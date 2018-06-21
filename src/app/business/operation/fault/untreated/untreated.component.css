@@ -1,0 +1,45 @@
+.Nav{
+  position: absolute;
+  top: 10px;
+  width: 216px;
+  left: 75px;
+  background-color:#202833;
+  height: 48px;
+  color: white;
+  box-shadow: rgba(27, 24, 24, 0.52) 10px 10px 30px 5px;
+}
+.title{
+  padding: 7%;
+  font-size: 17px;
+}
+.Body{
+  padding: 2% 0;
+  background-color: rgba(69, 76, 84, 0.52);
+  margin-right: 5px;
+  border-radius: 6px;
+}
+.table{
+  padding: 3% 0 0 0;
+  background-color: #202833;
+}
+table{
+  margin-left: 3%;
+  width: 95%;
+  background-color:#2b333d;
+}
+table thead{
+  color: white;
+}
+table tbody{
+  color: #626870;
+}
+table tr th,td{
+  padding: 1% 0 1% 1%;
+}
+table button{
+  width: 30%;
+  background-color: #34c779;
+  border-style: none;
+  color: white;
+  border-radius: 10px;
+}

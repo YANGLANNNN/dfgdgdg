@@ -6,12 +6,14 @@ import {SiderComponent} from './sider/sider.component';
 import { FooterComponent } from './footer/footer.component';
 import {ModalModule} from 'ngx-bootstrap';
 import {HomeRoutersModule} from './home.routers.module';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     HomeRoutersModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    ReactiveFormsModule
   ],
   declarations: [
     HomeComponent,

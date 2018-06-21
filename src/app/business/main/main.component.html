@@ -1,1 +1,49 @@
-<baidu-map [options]="options" style="display: block; width: 550px; height: 350px;"></baidu-map>
+<div class="container-fluid"    style=" margin: 0 15px;">
+  <div class="row">
+    <div class="col-md-3 title ">
+      <i style="margin-left: 15px;" class="glyphicon glyphicon-home"></i><p style="display: inline-block;padding:0 2% 0 5%;">管辖区域-实时视图</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="map">
+      <div echarts [options]="options" class="chart" style="height: 612px;"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="information">
+      <div class="information-title">
+        <div class="i-title">
+          <i style="padding: 1% 1% 1% 1%;" class="glyphicon glyphicon-volume-up"></i><p style="display: inline-block;">维修反馈-浏览</p>
+        </div>
+        <div class="i-link" >
+          <a (click)="this.Onlists = !this.Onlists; getData()">展开<i class="glyphicon glyphicon-chevron-down" ></i></a>
+      </div>
+      </div>
+      <div class="information-body"  [hidden]="Onlists">
+        <table style="width: 100%;">
+          <thead>
+            <tr style=" border-bottom: 1px solid rgba(0, 0, 0, 0.21);">
+            <th>#</th>
+            <th>编号</th>
+            <th>故障时间</th>
+            <th>完工时间</th>
+            <th>故障详情</th>
+            <th>GPS位置</th>
+          </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>5454548343</td>
+              <td>20180405 05:48:06</td>
+              <td>20180405 05:48:06</td>
+              <td>井盖丢失</td>
+              <td><a>经纬度：xx.xxxxxx/xx.xxxx</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+

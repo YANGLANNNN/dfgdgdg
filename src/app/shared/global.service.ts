@@ -28,14 +28,12 @@ export class GlobalService {
   public remove(key: string): any {
     this.sessionStorage.removeItem(key);
   }
-
 }
 export class NavList {
   constructor(
     public title: string,
     public routers: string,
     public icon: string,
-    public clsstate: boolean,
     public children: NavListChild[],
     public open: boolean
   ) {}
@@ -44,25 +42,15 @@ export class NavListChild {
   constructor(
     public title: string,
     public setState: boolean,
+    public icon: string,
     public routers: string
-  ) {}
-}
-
-export class DeparmentList {
-  constructor(
-    public id: number,
-    public name: string,
-    public dcode: string,
-    public tel: string,
-    public oid: number,
-    public pid: number,
-    public idt: string,
-    public udt: string
   ) {}
 }
 export class PageBody {
   constructor(
-    public page: number,
-    public row: number
+    public start: number,
+    public pageSize: number,
+    public currentPage: number
   ) {}
 }
+

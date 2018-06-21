@@ -2,15 +2,11 @@
   margin: 0;
   padding: 0;
 }
-.sider{
-  height:500px;
-}
 .search{
   width: 213px;
   height: 35px;
-  background-color: #373e48;
+  background-color: rgba(69, 76, 84, 0.52);
   border-radius: 2px;
-  opacity: 0.5;
 }
 .search i{
   color: white;
@@ -29,17 +25,36 @@ input::-webkit-input-placeholder{
   color: #ffffff;
 }
 
-.nav ul{
+.Mul{
   width: 213px;
-  background-color: #373e48;
+  background-color: rgba(69, 76, 84, 0.52);
   border-radius: 2px;
-  opacity: 0.5;
   margin-top: 25px;
 }
-.nav ul li{
-  padding: 10px;
+ul{
+  padding: 0;
+  transition: all 0.5s ease-out;
+  overflow: hidden;
 }
-.nav ul li a{
+ul>li ul{
+  height: 0;
+  overflow: hidden;
+}
+ul>li{
+  list-style: none;
+  line-height: 20px;
+}
+ul li a:hover{
+  color: #EEF5FD;
+  cursor: pointer;
+}
+.nav ul li{
+  list-style: none;
+}
+ul li a{
+  height: 40px;
+  line-height: 40px;
+  display: block;
   color: white;
   font-size: 16px;
   text-decoration: none;
@@ -50,14 +65,23 @@ input::-webkit-input-placeholder{
 }
 .Fnav{
   width: 100px;
-  background-color: black;
-  height: 30px;
+  background-color: rgba(2, 21, 49, 0.48);
   border-radius: 18px;
   display: block;
 }
 .Span{
   display: inline-block;
   float: none;
-  padding-top: 5px;
   padding-left: 16px;
+}
+
+.sliding_box{
+  transition: all 0.2s ease-out;
+  position: absolute;
+  left: 0;
+  width: 5px;
+  background: #ffffff;
+}
+.menu-ul{
+  transition: all 0.5s ease-out;
 }

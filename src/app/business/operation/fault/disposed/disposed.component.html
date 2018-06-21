@@ -1,0 +1,71 @@
+<div class="container-fluid" style="margin-left: 15px;">
+  <div class="row">
+    <div class="col-md-3 Nav">
+      <div class="title"><i class="glyphicon glyphicon-home"></i><p style="display: inline-block;padding-left: 10px;">故障详情-已处理</p>
+      </div>
+    </div>
+  </div>
+  <div class="row Body">
+    <div class="table">
+      <table>
+        <thead>
+        <tr style="border-bottom: 1px dashed rgba(199, 191, 194, 0.75);">
+          <th><input type="checkbox"></th>
+          <th># 编号</th>
+          <th>故障时间</th>
+          <th>故障情况</th>
+          <th>GPS位置</th>
+          <th>发送检修指令</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td>1 GY3432432543</td>
+          <td>2V54GFBFH</td>
+          <td>故障详情</td>
+          <td>经纬度：343453</td>
+          <td><button>发送</button></td>
+        </tr>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td>1 GY3432432543</td>
+          <td>2V54GFBFH</td>
+          <td>故障详情</td>
+          <td>经纬度：343453</td>
+          <td><button>发送</button></td>
+        </tr>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td>1 GY3432432543</td>
+          <td>2V54GFBFH</td>
+          <td>故障详情</td>
+          <td>经纬度：343453</td>
+          <td><button>发送</button></td>
+        </tr>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td>1 GY3432432543</td>
+          <td>2V54GFBFH</td>
+          <td>故障详情</td>
+          <td>经纬度：343453</td>
+          <td><button>发送</button></td>
+        </tr>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td>1 GY3432432543</td>
+          <td>2V54GFBFH</td>
+          <td>故障详情</td>
+          <td>经纬度：343453</td>
+          <td><button>发送</button></td>
+        </tr>
+        </tbody>
+      </table>
+      <div class="row text-center" style="padding: 1% 0;">
+        <div class="col-xs-12">
+          <app-pageoperation [pagesize]="pagesize" (pageBodyChange)="getPageBody($event)"></app-pageoperation>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,45 +1,59 @@
-.Nav{
-  position: absolute;
-  top: -10px;
-  width: 175px;
-  left: -5px;
-  background-color:#202833;
-  height: 48px;
-  color: white;
-  box-shadow: rgba(27, 24, 24, 0.52) 10px 10px 30px 5px;
+*{
+  margin: 0;
+  padding: 0;
 }
-.title{
-  padding: 9%;
-  font-size: 17px;
-}
-.Body{
-  padding: 2% 0;
+.container-fluid{
   background-color: rgba(69, 76, 84, 0.52);
   margin-right: 5px;
   border-radius: 6px;
 }
-.table{
-  padding: 4% 0;
-  background-color: #202833;
-}
-table{
-  margin-left: 3%;
-  width: 95%;
-  background-color:#2b333d;
-}
-table thead{
+.title{
+  position: absolute;
+  top: 10px;
+  width: 13%;
+  left: 80px;
+  background-color:#202833;
+  height: 48px;
   color: white;
+  box-shadow: rgba(27, 24, 24, 0.52) 10px 10px 30px 5px;
+  font-size: 15px;
+  padding-top: 10px;
+  z-index: 1;
 }
-table tbody{
-  color: #626870;
+.i-title{
+  display: inline;
 }
-table tr th,td{
-  padding: 1% 0 1% 1%;
+.i-link{
+  display: inline;
+  float: right;
+  padding: 10px;
+  cursor: pointer;
 }
-table button{
-  width: 30%;
-  background-color: #34c779;
-  border-style: none;
-  color: white;
-  border-radius: 10px;
+.i-link a{
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+}
+.i-link i{
+  margin-left: 10px;
+}
+.chart{
+  width: 100%;
+  z-index: 0;
+}
+.information{
+  background-color: white;
+}
+.information-title{
+  height: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.42);
+}
+.information-title i,p{
+  font-size: 17px;
+}
+.information-body{
+  padding-left: 2%;
+}
+table th,td{
+  padding: 4px 0 4px 0;
 }
